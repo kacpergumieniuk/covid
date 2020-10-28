@@ -6,6 +6,14 @@ let adata;
 const searchInput = document.querySelector('.search-input')
 const suggestionsPanel  = document.querySelector(".suggestions")
 
+
+let submitButton = document.getElementById("submit");
+submitButton.addEventListener('click', (zaz) => {
+    zaz = document.getElementById("covid").value;
+    Submit(zaz);
+})
+
+
 async function getData(){
     
     const result = await fetch(covidApi);
@@ -23,8 +31,6 @@ async function getData(){
         element.textContent = countries[x].Country;
         element.value = x;
         spaces.add(element);
-        
-
     }
     }
 
@@ -42,15 +48,18 @@ async function getData(){
 
         })
         suggestions.forEach(function(suggested){
-            let xxx = data.indexOf(suggested);
+          
+            
             const div = document.createElement("div");
             div.innerHTML = suggested.Country;
-            div.onclick = Submit(xxx);
+            div.addEventListener('click' ,() => Submit(data.indexOf(suggested)))
             suggestionsPanel.appendChild(div);
         })
         if(input === ''){
             suggestionsPanel.innerHTML = '';
         }
+
+        
     })
     
 
@@ -62,7 +71,10 @@ async function getData(){
     let number = adata.Countries[x].TotalConfirmed;
     let y = document.getElementById("number");
     let z = document.getElementById("deaths");
+    let o = document.getElementById("name");
     
+    o.innerHTML = adata.Countries[x].Country;
+
     let start = {
     
     startnumber: 0,
@@ -90,9 +102,11 @@ async function getData(){
 
    }
   
+
+  
    
     
         
-
+   
 getData();
 
