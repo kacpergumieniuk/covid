@@ -1,4 +1,131 @@
-.container{
+@import url("https://use.typekit.net/are8oau.css");
+
+body{
+font-family: myriad-pro, sans-serif;
+font-style: normal;
+font-weight: 700;
+color: #2D3631;
+padding:0;
+margin:0;
+
+}
+
+
+#landing-page-bottom-bg{
+    position: absolute;
+     bottom: 0;
+     z-index: -1;
+     max-width: 100%;
+ }
+ 
+ #virus1{
+     position: absolute;
+     right: 25%;
+ }
+ 
+ #virus2{
+     position: absolute;
+     bottom: 0;
+     right: 7%;
+ }
+ 
+
+.landing-page{
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    margin: 70px 70px;
+    justify-content: space-between;
+    
+}
+
+
+
+.left-side{
+    max-width: 1000px;    
+}
+
+
+.title{
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    width:500px
+ }
+
+ .title-text{
+    font-size: 20px;
+    margin-bottom: 70px;
+    width:500px
+}
+
+
+
+
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.stats-landing-page {
+   
+    text-align: right;
+}
+
+.stats-landing-page-text{
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 5px;
+   
+}
+
+.stats-landing-page-number{
+    font-size: 28px;
+    margin-bottom: 45px;
+    margin-top:0;
+}
+
+.buttons{
+    display:flex;
+    justify-content: space-between;
+    width:600px;
+}
+
+.main-button{
+    padding: 20px 70px;
+    
+    font-family: myriad-pro;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 20px;
+    color:white;
+    background-color: #CCCCFF;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.container{
     width: 60%;
     background: #333;
     margin: 100px auto;
@@ -24,4 +151,4 @@
 .suggestions > div:hover{
 background-color: #999;
 
-}
+}*/
