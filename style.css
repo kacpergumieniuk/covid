@@ -1,5 +1,10 @@
 @import url("https://use.typekit.net/are8oau.css");
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 body{
 font-family: myriad-pro, sans-serif;
 font-style: normal;
@@ -7,9 +12,24 @@ font-weight: 700;
 color: #2D3631;
 padding:0;
 margin:0;
+box-sizing: border-box;
+height: 200vh;
+overflow: hidden;
 
 }
 
+
+/*LANDING PAGE*/
+
+.landing-page{
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+/* LANDING PAGE IMAGES */
 
 #landing-page-bottom-bg{
     position: absolute;
@@ -21,6 +41,7 @@ margin:0;
  #virus1{
      position: absolute;
      right: 25%;
+     top:10%;
  }
  
  #virus2{
@@ -29,20 +50,11 @@ margin:0;
      right: 7%;
  }
  
-
-.landing-page{
-    height: 100%;
-    display:flex;
-    flex-direction: row;
-    margin: 70px 70px;
-    justify-content: space-between;
-    
-}
-
-
+/* LANDING PAGE LEFT SIDE */
 
 .left-side{
     max-width: 1000px;    
+    margin: 70px 0 0 70px;
 }
 
 
@@ -60,12 +72,12 @@ margin:0;
 }
 
 
-
-
+/* LANDING PAGE RIGHT SIDE */
 
 .right-side{
     display: flex;
     flex-direction: column;
+    margin: 70px 70px 0 0
     
 }
 
@@ -105,13 +117,66 @@ margin:0;
     border: none;
     border-radius: 32px;
     cursor: pointer;
+    text-decoration: none;
+    outline:none;
 }
 
 
+/*SEARCHING PAGE*/
 
 
+.searching-page{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.searching-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    
+}
+
+.searching-title{
+    font-size:48px;
 
 
+}
+.search-box{
+    
+  
+    width:500px;
+    height:62px;
+    border-radius: 42px;
+    display:flex;
+    justify-content: space-around;
+    border:11px solid #CCCCFF
+    
+
+}
+
+.search-txt{
+
+    border:none;
+    background:none;
+    outline:none;
+    font-family:myriad-pro;
+    font-size:22px;
+    color: #2D3631;
+    
+    
+}
+
+#back-arrow{
+    position:absolute;
+    top: 103%;
+    left: 1%;
+}
 
 
 
