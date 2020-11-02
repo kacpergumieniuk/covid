@@ -130,7 +130,21 @@ overflow: hidden;
     display:flex;
     align-items: center;
     justify-content: center;
+    position:relative;
    
+}
+
+.searching-page-bg{
+    position:absolute;
+    z-index:-1;
+    top:0;
+    right:0;
+}
+
+#virus3{
+    position:absolute;
+    top:0;
+    right:7%
 }
 
 .searching-content{
@@ -138,7 +152,7 @@ overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100px;
+    padding-bottom: 25px;
     
 }
 
@@ -174,8 +188,9 @@ overflow: hidden;
 
 #back-arrow{
     position:absolute;
-    top: 103%;
-    left: 1%;
+    top: 5%;
+    left: 2%;
+    
 }
 
 
