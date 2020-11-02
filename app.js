@@ -1,31 +1,37 @@
 
-
 const covidApi = "https://api.covid19api.com/summary";
+const allcases = document.getElementById("all-confirmed-cases");
+const alldeaths = document.getElementById("total-deaths")
+const allrecovered = document.getElementById("total-recovered")
 
 let adata;
-const searchInput = document.querySelector('.search-input')
+/*const searchInput = document.querySelector('.search-input')
 const suggestionsPanel  = document.querySelector(".suggestions")
 
 
 let submitButton = document.getElementById("submit");
-submitButton.addEventListener('click', (zaz) => {
-    zaz = document.getElementById("covid").value;
-    Submit(zaz);
-})
+submitButton.addEventListener('click', (x) => {
+    x = document.getElementById("covid").value;
+    Submit(x);
+})*/
 
 
 async function getData(){
     
     const result = await fetch(covidApi);
     adata = await result.json();
-    let countries = adata.Countries;
+   // let countries = adata.Countries;
 
-    document.getElementById("all").innerText = adata.Global.TotalConfirmed;
+    allcases.innerHTML = adata.Global.TotalConfirmed;
+    alldeaths.innerHTML = adata.Global.TotalDeaths;
+    allrecovered.innerHTML = adata.Global.TotalRecovered;
+
+}
 
     
     
      
-    for(let x in countries){
+    /*for(let x in countries){
         let spaces = document.getElementById("covid");
         let element  = document.createElement("option");
         element.textContent = countries[x].Country;
@@ -109,4 +115,5 @@ async function getData(){
         
    
 getData();
-
+*/
+getData();

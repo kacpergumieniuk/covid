@@ -11,7 +11,24 @@ margin:0;
 }
 
 
-
+#landing-page-bottom-bg{
+    position: absolute;
+     bottom: 0;
+     z-index: -1;
+     max-width: 100%;
+ }
+ 
+ #virus1{
+     position: absolute;
+     right: 25%;
+ }
+ 
+ #virus2{
+     position: absolute;
+     bottom: 0;
+     right: 7%;
+ }
+ 
 
 .landing-page{
     height: 100%;
@@ -22,23 +39,6 @@ margin:0;
     
 }
 
-#landing-page-bottom-bg{
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    max-width: 100%;
-}
-
-#virus1{
-    position: absolute;
-    right: 25%;
-}
-
-#virus2{
-    position: absolute;
-    bottom: 0;
-    right: 7%;
-}
 
 
 .left-side{
