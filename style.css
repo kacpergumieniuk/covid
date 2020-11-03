@@ -149,7 +149,10 @@ overflow: hidden;
     top: 5%;
     left: 2%;
     
+    
 }
+
+
 .searching-page-bg{
     position:absolute;
     z-index:-1;
@@ -164,6 +167,7 @@ overflow: hidden;
 }
 
 /*SEARCHING CONTENT*/
+
 
 
 .searching-content{
@@ -217,44 +221,127 @@ overflow: hidden;
     display:flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    
+}
+
+#stats-page-path{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    z-index: -1;
+}
+
+#back-arrow-2{
+    position:absolute;
+    top:5%;
+    left:2%;
+    
+}
+
+#virus4{
+    position:absolute;
+    bottom: -20%;
+    left:15%;
 }
 
 
-/*STATS TITLE*/
 
 .country-name p{
-    font-size: 72px;
+    font-size: 78px;
     margin:0;
+    padding: 60px 0;
+    
+    
 }
 
-.stats{
+
+/*TOTAL STATS*/
+
+
+.stats-total{
     display:flex;
     flex-direction: row;
     width:100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin: 0 0 80px 0;
 }
 
 .stat-container{
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin:0;
+    width:33%
 }
 
 .stat-title{
-    font-size: 36px;
+    font-size: 42px;
     margin:0;
+    
 }
 
 .stat-number{
+    font-size: 36px;
+    padding:0;
+    margin: 0;
+    color:#9D9DD8;
+    
+}
+
+
+/*NEW STATS*/
+
+
+.stats-new{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-evenly;
+}
+
+.stat-container-new{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:33%;
+}
+
+
+
+
+
+.stat-title-new{
     font-size: 28px;
     margin:0;
 }
 
+.stat-number-new{
+    font-size: 22px;
+    color:#9D9DD8;
+    margin:0;
+}
 
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    bottom:1%;
+    color:#9D9DD8;
+}
+
+.footer a{
+    display:flex;
+    flex-direction: column;
+}
 
 
-
+#github{
+    fill:black;
+    cursor: pointer;
+   
+}
 
 
 
