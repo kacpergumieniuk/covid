@@ -13,7 +13,7 @@ color: #2D3631;
 padding:0;
 margin:0;
 box-sizing: border-box;
-height: 200vh;
+height: 300vh;
 overflow: hidden;
 
 }
@@ -117,8 +117,15 @@ overflow: hidden;
     border: none;
     border-radius: 32px;
     cursor: pointer;
+    transition: ease-in 0.3s;
     text-decoration: none;
     outline:none;
+    
+}
+
+.main-button:hover{
+
+    background-color:#86CFA1
 }
 
 
@@ -134,6 +141,15 @@ overflow: hidden;
    
 }
 
+
+/*SEARCHING PAGE IMAGES*/
+
+#back-arrow-1{
+    position:absolute;
+    top: 5%;
+    left: 2%;
+    
+}
 .searching-page-bg{
     position:absolute;
     z-index:-1;
@@ -146,6 +162,9 @@ overflow: hidden;
     top:0;
     right:7%
 }
+
+/*SEARCHING CONTENT*/
+
 
 .searching-content{
     display:flex;
@@ -174,6 +193,10 @@ overflow: hidden;
 
 }
 
+.search-box a{
+    display:flex;
+}
+
 .search-txt{
 
     border:none;
@@ -186,12 +209,47 @@ overflow: hidden;
     
 }
 
-#back-arrow{
-    position:absolute;
-    top: 5%;
-    left: 2%;
-    
+/*STATS PAGE*/
+
+
+.stats-page{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+/*STATS TITLE*/
+
+.country-name p{
+    font-size: 72px;
+    margin:0;
+}
+
+.stats{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-around;
+}
+
+.stat-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-title{
+    font-size: 36px;
+    margin:0;
+}
+
+.stat-number{
+    font-size: 28px;
+    margin:0;
+}
+
 
 
 
