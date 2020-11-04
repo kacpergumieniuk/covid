@@ -1,10 +1,33 @@
 
+/*COVID URL*/
+
 const covidApi = "https://api.covid19api.com/summary";
-const allcases = document.getElementById("all-confirmed-cases");
-const alldeaths = document.getElementById("total-deaths")
-const allrecovered = document.getElementById("total-recovered")
+
+/*LANDING PAGE VARIABLES*/
+
+const allCases = document.getElementById("all-confirmed-cases");
+const allDeaths = document.getElementById("total-deaths");
+const allRecovered = document.getElementById("total-recovered");
+
+/*STATS PAGE VARIABLES*/
+
+const countryTitle = document.getElementById("country-title");
+
+const totalDeaths = document.getElementById("total-deaths-stat");
+const totalCases = document.getElementById("total-cases-stat");
+const totalRecovered = document.getElementById("total-recovered-stat");
+
+const newDeaths = document.getElementById("deaths-stat-new");
+const newCases = document.getElementById("cases-stat-new");
+const newRecovered = document.getElementById("recovered-stat-new");
 
 let adata;
+let countries;
+
+
+
+
+
 /*const searchInput = document.querySelector('.search-input')
 const suggestionsPanel  = document.querySelector(".suggestions")
 
@@ -20,14 +43,19 @@ async function getData(){
     
     const result = await fetch(covidApi);
     adata = await result.json();
-   // let countries = adata.Countries;
+    countries = adata.Countries;
 
-    allcases.innerHTML = adata.Global.TotalConfirmed;
-    alldeaths.innerHTML = adata.Global.TotalDeaths;
-    allrecovered.innerHTML = adata.Global.TotalRecovered;
+    
+
+    allCases.innerHTML = adata.Global.TotalConfirmed;
+    allDeaths.innerHTML = adata.Global.TotalDeaths;
+    allRecovered.innerHTML = adata.Global.TotalRecovered;
 
 }
 
+function Submit(x){
+    countryTitle.innerHTML = countries[x].Country;
+}
     
     
      

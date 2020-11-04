@@ -63,10 +63,19 @@
 <!--Main contentn of searching page-->
 <div class="searching-content">
     <p class="searching-title">Search your desired country</p>
-    <div class="search-box">
-        <input type="text" class="search-txt" placeholder="Search...">
-        <a href="#stats-page"><img src="images/searching-icon.svg"></a>
-    </div>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Search...">
+            <a href="#stats-page"><img src="images/searching-icon.svg" onclick = Submit(9)></a>
+        </div>
+        <div class="suggestions">
+            <div>Poland</div>
+            <div>USA</div>
+            
+            
+            
+        </div>
+        </div>
 </div>
 
 </section>
@@ -87,7 +96,7 @@
 
 
 <div class="country-name">
-<p>Poland</p>
+<p id="country-title"></p>
 </div>
 
 
@@ -167,6 +176,7 @@
     <h1>Total confirmed: <span id="number"></span></h1>
     <h1>Total deaths: <span id="deaths"></span></h1>
 
+    
     <div class ="container">
         <input class="search-input" type="text" placeholder="Search...">
         <div class="suggestions">
