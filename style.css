@@ -18,6 +18,18 @@ overflow: hidden;
 
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+/* Track */
+
+  
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+  }
 
 /*LANDING PAGE*/
 
@@ -192,8 +204,11 @@ overflow: hidden;
     flex-direction: column;
     align-items: center;
     
+    
 }
-
+.searching-container{
+    position:relative;
+}
 .search-box{
     
   
@@ -228,6 +243,11 @@ overflow: hidden;
     border-color: #CCCCFF;
     border-style: solid;
     border-radius: 0 0 24px 24px;
+    max-height: 165px;
+    overflow-y: scroll;
+    position: absolute;
+    left:50px;
+    
     
     
 }
@@ -241,7 +261,10 @@ overflow: hidden;
 }
 
 .suggestions > div:hover{
-    background-color: #CCCCFF;}
+    background-color: #CCCCFF;
+
+}
+    
 
 /*STATS PAGE*/
 

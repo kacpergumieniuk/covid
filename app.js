@@ -9,6 +9,11 @@ const allCases = document.getElementById("all-confirmed-cases");
 const allDeaths = document.getElementById("total-deaths");
 const allRecovered = document.getElementById("total-recovered");
 
+/*SEARCHING PAGE VARIABLES*/
+
+const searchInput = document.querySelector('.search-txt');
+const suggestionsPanel  = document.querySelector(".suggestions");
+
 /*STATS PAGE VARIABLES*/
 
 const countryTitle = document.getElementById("country-title");
@@ -53,7 +58,35 @@ async function getData(){
 
 }
 
-function Submit(x){
+searchInput.addEventListener('keyup' , function(){
+    
+    const input = searchInput.value;
+    suggestionsPanel.innerHTML = '';
+
+    const suggestions = countries.filter(function(country){
+        return country.Country.toLowerCase().startsWith(input);
+    })
+
+    suggestions.forEach(function(suggested){
+        const div = document.createElement("div");
+        div.innerHTML = suggested.Country;
+        suggestionsPanel.appendChild(div);
+    })
+
+    if(input === ''){
+        suggestionsPanel.innerHTML = '';
+    }
+
+
+})
+
+
+
+
+
+
+
+    function Submit(x){
     countryTitle.innerHTML = countries[x].Country;
 }
     
