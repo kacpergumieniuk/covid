@@ -10,9 +10,9 @@
     
     <!--Images of the landing page-->
     
-    <img src="path9.svg" id="landing-page-bottom-bg">
-    <img src="virus1.png"id="virus1">
-    <img src="virus2.png" id="virus2">
+    <img src="images/path9.svg" id="landing-page-bottom-bg">
+    <img src="images/virus1.png"id="virus1">
+    <img src="images/virus2.png" id="virus2">
 
     <!--Section of the landing page-->
 
@@ -55,17 +55,95 @@
 
 <section class="searching-page" id="searching-page">
 
-<a href="#landing-page"><img src="back-arrow.svg" id="back-arrow"></a>
+<!--Images of searching page-->
+<img src="images/searching-page-path.svg" alt="" class="searching-page-bg">
+<img src="images/virus3.png" id="virus3">
+<a href="#landing-page"><img src="images/back-arrow.svg" id="back-arrow-1"></a>
 
+<!--Main contentn of searching page-->
 <div class="searching-content">
     <p class="searching-title">Search your desired country</p>
-    <div class="search-box">
-        <input type="text" class="search-txt" placeholder="Search...">
-        <img src="searching-icon.svg" alt="">
-    </div>
-
+    <div class="container">
+        <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Search...">
+            <a href="#stats-page"><img src="images/searching-icon.svg" onclick = Submit(9)></a>
+        </div>
+        <div class="suggestions">
+            <div>Poland</div>
+            <div>USA</div>
+            
+            
+            
+        </div>
+        </div>
 </div>
 
+</section>
+
+<!--Stats page-->
+
+<section class="stats-page" id="stats-page">
+
+
+<!--Stats page images-->
+
+
+<img src="images/stats-page-path.svg" id="stats-page-path">
+<a href="#searching-page"><img src="images/back-arrow.svg" id="back-arrow-2"></a>
+<img src="images/virus1.png" id="virus4">
+
+<!--Country name-->
+
+
+<div class="country-name">
+<p id="country-title"></p>
+</div>
+
+
+
+<!--Stats total-->
+
+<div class="stats-total">
+    <div class="stat-container">
+        <p class="stat-title">Total Deaths</p>
+        <p class="stat-number" id="total-deaths-stat">32113</p>
+    </div>
+    <div class="stat-container">
+        <p class="stat-title">Total Cases</p>
+        <p class="stat-number" id="total-cases-stat">32113</p>
+    </div>
+    <div class="stat-container">
+        <p class="stat-title">Total Recovered</p>
+        <p class="stat-number" id="total-recovered-stat">32113</p>
+    </div>
+</div>
+
+<!--Stats new-->
+
+<div class="stats-new">
+    <div class="stat-container-new">
+        
+        <p class="stat-title-new">New Deaths</p>
+        <p class="stat-number-new" id="deaths-stat-new">32113</p>
+    
+    </div>
+    <div class="stat-container-new">
+        <p class="stat-title-new">New Cases</p>
+        <p class="stat-number-new" id="cases-stat-new">32113</p>
+    </div>
+    <div class="stat-container-new">
+        <p class="stat-title-new">New Recovered</p>
+        <p class="stat-number-new" id="recovered-stat-new">32113</p>
+    </div>
+</div>
+
+<!--Footer-->
+
+
+<div class="footer">
+    <p>app created by Kacper Gumieniuk</p>
+    <img src="images/github.svg" id="github">
+</div>
 </section>
 
        
@@ -98,6 +176,7 @@
     <h1>Total confirmed: <span id="number"></span></h1>
     <h1>Total deaths: <span id="deaths"></span></h1>
 
+    
     <div class ="container">
         <input class="search-input" type="text" placeholder="Search...">
         <div class="suggestions">
