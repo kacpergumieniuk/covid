@@ -71,7 +71,7 @@ searchInput.addEventListener('keyup' , function(){
     const suggestions = countries.filter(function(country){
         return country.Country.toLowerCase().startsWith(input);
     })
-    console.log(suggestions.length);
+   
 
     
 
@@ -79,8 +79,9 @@ searchInput.addEventListener('keyup' , function(){
         const div = document.createElement("div");
         div.innerHTML = suggested.Country;
         div.addEventListener('click' , function(){
-            Submit(countries.indexOf(suggested))
             statsSection.scrollIntoView();
+            Submit(countries.indexOf(suggested))
+            
         } )
         suggestionsPanel.appendChild(div);
     })
