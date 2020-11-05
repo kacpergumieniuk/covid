@@ -22,13 +22,13 @@ overflow: hidden;
     width: 10px;
     
   }
-/* Track */
+
 
   
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(136, 136, 136);
+    background: #2D3631;
   }
 
 /*LANDING PAGE*/
@@ -83,6 +83,36 @@ overflow: hidden;
     width:500px
 }
 
+.buttons{
+    display:flex;
+    justify-content: space-between;
+    width:600px;
+}
+
+.main-button{
+    padding: 20px 70px;
+    
+    font-family: myriad-pro;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 20px;
+    color:white;
+    background-color: #CCCCFF;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+    text-decoration: none;
+    outline:none;
+    
+}
+
+.main-button:hover{
+
+    background-color:#86CFA1
+}
+
+
 
 /* LANDING PAGE RIGHT SIDE */
 
@@ -111,34 +141,6 @@ overflow: hidden;
     margin-top:0;
 }
 
-.buttons{
-    display:flex;
-    justify-content: space-between;
-    width:600px;
-}
-
-.main-button{
-    padding: 20px 70px;
-    
-    font-family: myriad-pro;
-    font-style: bold;
-    font-weight: 700;
-    font-size: 20px;
-    color:white;
-    background-color: #9D9DD8;
-    border: none;
-    border-radius: 32px;
-    cursor: pointer;
-    transition: ease-in 0.3s;
-    text-decoration: none;
-    outline:none;
-    
-}
-
-.main-button:hover{
-
-    background-color:#86CFA1
-}
 
 
 /*SEARCHING PAGE*/
@@ -246,6 +248,7 @@ overflow: hidden;
     max-height: 165px;
     overflow-y: scroll;
     position: absolute;
+    display:none;
     left:50px;
     
     
@@ -255,7 +258,6 @@ overflow: hidden;
 .suggestions > div{
     padding: 15px;
     font-size: 20px;
-   /* border-top: 3px solid #CCCCFF;*/
     cursor: pointer;
     transition: 0.3s;
 }
