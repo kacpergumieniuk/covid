@@ -9,6 +9,12 @@ const allCases = document.getElementById("all-confirmed-cases");
 const allDeaths = document.getElementById("total-deaths");
 const allRecovered = document.getElementById("total-recovered");
 
+/*SEARCHING PAGE VARIABLES*/
+
+const searchInput = document.querySelector('.search-txt');
+const suggestionsPanel  = document.querySelector(".suggestions");
+const statsSection = document.getElementById("stats-page")
+
 /*STATS PAGE VARIABLES*/
 
 const countryTitle = document.getElementById("country-title");
@@ -53,8 +59,66 @@ async function getData(){
 
 }
 
-function Submit(x){
+
+
+searchInput.addEventListener('keyup' , function(){
+    
+    
+    const input = searchInput.value;
+    suggestionsPanel.innerHTML = '';
+    suggestionsPanel.style.display = "inline-block";
+
+    const suggestions = countries.filter(function(country){
+        return country.Country.toLowerCase().startsWith(input);
+    })
+   
+
+    
+
+    suggestions.forEach(function(suggested){
+        const div = document.createElement("div");
+        div.innerHTML = suggested.Country;
+        div.addEventListener('click' , function(){
+            statsSection.scrollIntoView();
+            Submit(countries.indexOf(suggested))
+            
+        } )
+        suggestionsPanel.appendChild(div);
+    })
+
+    
+
+    if(input === ''){
+        suggestionsPanel.innerHTML = '';
+    }
+    
+    if(suggestionsPanel.innerHTML === ''){
+        suggestionsPanel.style.display = "none";
+    }
+    
+    
+   
+
+   
+})
+
+
+
+
+
+
+    function Submit(x){
+    
     countryTitle.innerHTML = countries[x].Country;
+    
+    totalDeaths.innerHTML = countries[x].TotalDeaths;
+    totalCases.innerHTML = countries[x].TotalConfirmed;
+    totalRecovered.innerHTML = countries[x].TotalRecovered;
+
+    newDeaths.innerHTML = countries[x].NewDeaths;
+    newCases.innerHTML = countries[x].NewConfirmed;
+    newRecovered.innerHTML = countries[x].NewRecovered;
+
 }
     
     
