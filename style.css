@@ -336,6 +336,48 @@ body {
   cursor: pointer;
 }
 
+/* MOBILE VIEW */
+
+@media (max-width: 840px) {
+  .right-side {
+    display: none;
+  }
+  #virus1 {
+    display: none;
+  }
+  #virus2 {
+    width: 330px;
+    right: 32%;
+  }
+
+  #landing-page-bottom-bg {
+    max-width: 1000px;
+  }
+
+  .left-side {
+    margin: 30px 50px;
+    width: 100%;
+    text-align: center;
+  }
+  .title {
+    width: auto;
+  }
+  .title-text {
+    width: auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+  }
+
+  #list-button {
+    display: none;
+  }
+}
 /*.container{
     width: 60%;
     background: #333;
