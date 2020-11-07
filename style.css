@@ -13,7 +13,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 300vh;
-  overflow: hidden;
+
+  /*#F2F2FE*/
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +38,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
+  position: relative;
 }
 
 /* LANDING PAGE IMAGES */
@@ -44,8 +47,12 @@ body {
 #landing-page-bottom-bg {
   position: absolute;
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
   max-width: 100%;
+}
+
+#landing-page-bottom-bg-mobile {
+  display: none;
 }
 
 #virus1 {
@@ -58,6 +65,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 7%;
+  z-index: -1;
 }
 
 /* LANDING PAGE LEFT SIDE */
@@ -68,6 +76,7 @@ body {
 }
 
 .title {
+  padding-top: 0;
   font-size: 48px;
   margin-top: 0;
   margin-bottom: 40px;
@@ -94,7 +103,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   color: white;
-  background-color: #ccccff;
+  background-color: #bebefd;
   border: none;
   border-radius: 32px;
   cursor: pointer;
@@ -149,12 +158,16 @@ body {
   left: 2%;
 }
 
-.searching-page-bg {
+#searching-page-bg {
   position: absolute;
   z-index: -1;
   top: 0;
   right: 0;
   width: 100%;
+}
+
+#searching-page-path-mobile {
+  display: none;
 }
 
 #virus3 {
@@ -251,10 +264,13 @@ body {
 
 #virus4 {
   position: absolute;
-  bottom: -20%;
+  bottom: 0;
   left: 13%;
 }
 
+#stats-page-bottom-bg-mobile {
+  display: none;
+}
 .country-name p {
   font-size: 78px;
   margin: 0;
@@ -336,9 +352,52 @@ body {
   cursor: pointer;
 }
 
-/* MOBILE VIEW */
+/* 
+/
+/
+/
+/
+/
+/////MOBILE VIEW/////
+/
+/
+/
+/
+/
+/
+ */
 
-@media (max-width: 840px) {
+/*LANDING PAGE*/
+
+@media (max-width: 1250px) {
+  #virus1 {
+    width: 250px;
+    right: 27%;
+    top: 20%;
+  }
+
+  #virus4 {
+    width: 250px;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  #virus1 {
+    display: none;
+  }
+  .stats-landing-page-text {
+    font-size: 28px;
+  }
+  .stats-landing-page-number {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 926px) {
   .right-side {
     display: none;
   }
@@ -346,12 +405,19 @@ body {
     display: none;
   }
   #virus2 {
-    width: 330px;
-    right: 32%;
+    width: 400px;
   }
 
   #landing-page-bottom-bg {
-    max-width: 1000px;
+    display: none;
+  }
+
+  #landing-page-bottom-bg-mobile {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+    width: 100%;
   }
 
   .left-side {
@@ -361,10 +427,11 @@ body {
   }
   .title {
     width: auto;
+    font-size: 72px;
   }
   .title-text {
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     font-size: 20px;
   }
   .buttons {
@@ -377,7 +444,122 @@ body {
   #list-button {
     display: none;
   }
+
+  /*SEARCHING PAGE*/
+
+  #back-arrow-1 {
+    width: 50px;
+  }
+
+  #virus3 {
+    width: 400px;
+  }
+
+  #searching-page-bg {
+    display: none;
+  }
+  #searching-page-path-mobile {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .searching-content {
+    text-align: center;
+  }
+  .search-box {
+    width: 400px;
+    justify-content: space-evenly;
+  }
+  .suggestions {
+    width: 300px;
+    max-height: 110px;
+  }
+  /*STATS PAGE*/
+
+  .stats-page {
+    text-align: center;
+    margin: 0 20;
+  }
+
+  #back-arrow-2 {
+    width: 50px;
+  }
+
+  #stats-page-bottom-bg-mobile {
+    display: inline-block;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  #stats-page-path {
+    display: none;
+  }
+
+  #virus4 {
+    display: none;
+  }
+
+  .country-name p {
+    font-size: 58px;
+  }
+
+  .stat-title {
+    font-size: 28px;
+  }
+
+  .stats-total {
+    width: 80%;
+  }
+
+  .stats-new {
+    width: 80%;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  #github {
+    width: 60px;
+  }
 }
+
+@media (max-width: 550px) {
+  .title {
+    font-size: 64px;
+  }
+
+  .title-text {
+    font-size: 18px;
+  }
+  #virus2 {
+    width: 300px;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
+  #virus3 {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .search-box {
+    width: 300px;
+  }
+
+  .suggestions {
+    width: 200px;
+  }
+}
+
 /*.container{
     width: 60%;
     background: #333;
