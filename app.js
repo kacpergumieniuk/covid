@@ -114,42 +114,42 @@ searchInput.addEventListener('keyup' , function(){
         anime({
             targets: totalDeaths,
             innerHTML: [0, countries[x].TotalDeaths],
-            duration:2000,
+            duration:1500,
             round: true,
         })
 
         anime({
             targets: totalCases,
             innerHTML: [0, countries[x].TotalConfirmed],
-            duration:2000,
+            duration:1500,
             round: true,
         })
 
         anime({
             targets: totalRecovered,
             innerHTML: [0, countries[x].TotalRecovered],
-            duration:2000,
+            duration:1500,
             round: true,
         })
 
         anime({
             targets: newDeaths,
             innerHTML: [0, countries[x].NewDeaths],
-            duration:3000,
+            duration:2500,
             round: true,
         })
 
         anime({
             targets: newCases,
             innerHTML: [0, countries[x].NewConfirmed],
-            duration:3000,
+            duration:2500,
             round: true,
         })
 
         anime({
             targets: newRecovered,
             innerHTML: [0, countries[x].NewRecovered],
-            duration:3000,
+            duration:2500,
             round: true,
         })
 

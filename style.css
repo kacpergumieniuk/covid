@@ -507,6 +507,10 @@ body {
     font-size: 58px;
   }
 
+  .stat-number {
+    font-size: 24px;
+  }
+
   .stat-title {
     font-size: 28px;
   }
@@ -535,28 +539,72 @@ body {
 
 @media (max-width: 550px) {
   .title {
-    font-size: 64px;
+    font-size: 38px;
+    margin-top: 80px;
   }
 
   .title-text {
-    font-size: 18px;
+    font-size: 14px;
   }
   #virus2 {
-    width: 300px;
+    width: 240px;
     bottom: 0;
     margin: 0 auto;
   }
+  .main-button {
+    padding: 15px 30px;
+  }
 
   #virus3 {
-    width: 300px;
+    width: 240px;
     margin: 0 auto;
+  }
+
+  #back-arrow-2 {
+    width: 30px;
+  }
+
+  #back-arrow-1 {
+    width: 30px;
   }
   .search-box {
     width: 300px;
   }
 
+  .searching-title {
+    font-size: 38px;
+  }
+
   .suggestions {
     width: 200px;
+  }
+
+  .country-name p {
+    padding: 100px 0 60px 0;
+  }
+
+  .stat-title {
+    font-size: 22px;
+  }
+
+  .stat-number {
+    font-size: 18px;
+  }
+
+  .stat-title-new {
+    font-size: 18px;
+  }
+
+  .stat-number-new {
+    font-size: 16px;
+  }
+
+  .footer p {
+    font-size: 18px;
+  }
+
+  #github {
+    width: 30px;
   }
 }
 
