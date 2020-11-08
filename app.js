@@ -109,15 +109,54 @@ searchInput.addEventListener('keyup' , function(){
 
     function Submit(x){
     
-    countryTitle.innerHTML = countries[x].Country;
-    
-    totalDeaths.innerHTML = countries[x].TotalDeaths;
-    totalCases.innerHTML = countries[x].TotalConfirmed;
-    totalRecovered.innerHTML = countries[x].TotalRecovered;
+        countryTitle.innerHTML = countries[x].Country;
 
-    newDeaths.innerHTML = countries[x].NewDeaths;
-    newCases.innerHTML = countries[x].NewConfirmed;
-    newRecovered.innerHTML = countries[x].NewRecovered;
+        anime({
+            targets: totalDeaths,
+            innerHTML: [0, countries[x].TotalDeaths],
+            duration:2000,
+            round: true,
+        })
+
+        anime({
+            targets: totalCases,
+            innerHTML: [0, countries[x].TotalConfirmed],
+            duration:2000,
+            round: true,
+        })
+
+        anime({
+            targets: totalRecovered,
+            innerHTML: [0, countries[x].TotalRecovered],
+            duration:2000,
+            round: true,
+        })
+
+        anime({
+            targets: newDeaths,
+            innerHTML: [0, countries[x].NewDeaths],
+            duration:3000,
+            round: true,
+        })
+
+        anime({
+            targets: newCases,
+            innerHTML: [0, countries[x].NewConfirmed],
+            duration:3000,
+            round: true,
+        })
+
+        anime({
+            targets: newRecovered,
+            innerHTML: [0, countries[x].NewRecovered],
+            duration:3000,
+            round: true,
+        })
+
+    
+    
+    
+
 
 }
     
