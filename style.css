@@ -538,13 +538,16 @@ body {
 }
 
 @media (max-width: 550px) {
+  .left-side {
+    margin: 30px 30px;
+  }
+
   .title {
-    font-size: 38px;
-    margin-top: 80px;
+    font-size: 46px;
   }
 
   .title-text {
-    font-size: 14px;
+    font-size: 16px;
   }
   #virus2 {
     width: 240px;
@@ -568,7 +571,16 @@ body {
     width: 30px;
   }
   .search-box {
-    width: 300px;
+    width: 250px;
+    justify-content: space-around;
+  }
+
+  .search-box input {
+    width: 150px;
+  }
+
+  .search-box img {
+    width: 30px;
   }
 
   .searching-title {
@@ -576,7 +588,7 @@ body {
   }
 
   .suggestions {
-    width: 200px;
+    width: 150px;
   }
 
   .country-name p {
