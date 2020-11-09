@@ -405,7 +405,7 @@ body {
     display: none;
   }
   #virus2 {
-    width: 400px;
+    width: 350px;
   }
 
   #landing-page-bottom-bg {
@@ -452,7 +452,7 @@ body {
   }
 
   #virus3 {
-    width: 400px;
+    width: 350px;
   }
 
   #searching-page-bg {
@@ -554,6 +554,10 @@ body {
     bottom: 0;
     margin: 0 auto;
   }
+  .buttons {
+    padding-top: 20px;
+  }
+
   .main-button {
     padding: 15px 30px;
   }
@@ -577,6 +581,10 @@ body {
 
   .search-box input {
     width: 150px;
+  }
+
+  .search-txt {
+    font-size: 16px;
   }
 
   .search-box img {
