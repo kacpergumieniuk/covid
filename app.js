@@ -60,7 +60,9 @@ searchInput.addEventListener('keyup' , function(){
     suggestionsPanel.style.display = "inline-block";
 
     const suggestions = countries.filter(function(country){
-        return country.Country.toLowerCase().startsWith(input);
+       
+       
+        return country.Country.toLowerCase().startsWith(input) || country.Country.startsWith(input);
     })
    
 
@@ -101,45 +103,47 @@ searchInput.addEventListener('keyup' , function(){
     function Submit(x){
     
         countryTitle.innerHTML = countries[x].Country;
+        a = numberWithSpaces(countries[x].TotalDeaths);
+        d = numberWithSpaces(countries[x].TotalRecovered);
 
         anime({
             targets: totalDeaths,
-            innerHTML: [0, countries[x].TotalDeaths],
+            innerHTML: [0, a],
             duration:1500,
             round: true,
         })
 
         anime({
             targets: totalCases,
-            innerHTML: [0, countries[x].TotalConfirmed],
+            innerHTML: [0, numberWithSpaces(countries[x].TotalConfirmed)],
             duration:1500,
             round: true,
         })
 
         anime({
             targets: totalRecovered,
-            innerHTML: [0, countries[x].TotalRecovered],
+            innerHTML: [0, d],
             duration:1500,
             round: true,
         })
 
         anime({
             targets: newDeaths,
-            innerHTML: [0, countries[x].NewDeaths],
+            innerHTML: [0, numberWithSpaces(countries[x].NewDeaths)],
             duration:2500,
             round: true,
         })
 
         anime({
             targets: newCases,
-            innerHTML: [0, countries[x].NewConfirmed],
+            innerHTML: [0, numberWithSpaces(countries[x].NewConfirmed)],
             duration:2500,
             round: true,
         })
 
         anime({
             targets: newRecovered,
-            innerHTML: [0, countries[x].NewRecovered],
+            innerHTML: [0, numberWithSpaces(ountries[x].NewRecovered)],
             duration:2500,
             round: true,
         })
@@ -155,5 +159,9 @@ searchInput.addEventListener('keyup' , function(){
      
 
 
-console.log(localStorage)
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+console.log(numberWithSpaces(845))
+
 getData();
