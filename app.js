@@ -34,15 +34,6 @@ let countries;
 
 
 
-/*const searchInput = document.querySelector('.search-input')
-const suggestionsPanel  = document.querySelector(".suggestions")
-
-
-let submitButton = document.getElementById("submit");
-submitButton.addEventListener('click', (x) => {
-    x = document.getElementById("covid").value;
-    Submit(x);
-})*/
 
 
 async function getData(){
@@ -69,7 +60,9 @@ searchInput.addEventListener('keyup' , function(){
     suggestionsPanel.style.display = "inline-block";
 
     const suggestions = countries.filter(function(country){
-        return country.Country.toLowerCase().startsWith(input);
+       
+       
+        return country.Country.toLowerCase().startsWith(input) || country.Country.startsWith(input);
     })
    
 
@@ -109,105 +102,66 @@ searchInput.addEventListener('keyup' , function(){
 
     function Submit(x){
     
-    countryTitle.innerHTML = countries[x].Country;
-    
-    totalDeaths.innerHTML = countries[x].TotalDeaths;
-    totalCases.innerHTML = countries[x].TotalConfirmed;
-    totalRecovered.innerHTML = countries[x].TotalRecovered;
+        countryTitle.innerHTML = countries[x].Country;
+        a = numberWithSpaces(countries[x].TotalDeaths);
+        d = numberWithSpaces(countries[x].TotalRecovered);
 
-    newDeaths.innerHTML = countries[x].NewDeaths;
-    newCases.innerHTML = countries[x].NewConfirmed;
-    newRecovered.innerHTML = countries[x].NewRecovered;
+        anime({
+            targets: totalDeaths,
+            innerHTML: [0, a],
+            duration:1500,
+            round: true,
+        })
+
+        anime({
+            targets: totalCases,
+            innerHTML: [0, numberWithSpaces(countries[x].TotalConfirmed)],
+            duration:1500,
+            round: true,
+        })
+
+        anime({
+            targets: totalRecovered,
+            innerHTML: [0, d],
+            duration:1500,
+            round: true,
+        })
+
+        anime({
+            targets: newDeaths,
+            innerHTML: [0, numberWithSpaces(countries[x].NewDeaths)],
+            duration:2500,
+            round: true,
+        })
+
+        anime({
+            targets: newCases,
+            innerHTML: [0, numberWithSpaces(countries[x].NewConfirmed)],
+            duration:2500,
+            round: true,
+        })
+
+        anime({
+            targets: newRecovered,
+            innerHTML: [0, numberWithSpaces(ountries[x].NewRecovered)],
+            duration:2500,
+            round: true,
+        })
+
+    
+    
+    
+
 
 }
     
     
      
-    /*for(let x in countries){
-        let spaces = document.getElementById("covid");
-        let element  = document.createElement("option");
-        element.textContent = countries[x].Country;
-        element.value = x;
-        spaces.add(element);
-    }
-    }
 
 
-    searchInput.addEventListener('keyup', function(){
-        data = adata.Countries;
-        input = searchInput.value;
-        
-        
-        
-        suggestionsPanel.innerHTML = '';
-        
-        const suggestions = data.filter(function(country){
-            return country.Country.toLowerCase().startsWith(input);
-
-        })
-        suggestions.forEach(function(suggested){
-          
-            
-            const div = document.createElement("div");
-            div.innerHTML = suggested.Country;
-            div.addEventListener('click' ,() => Submit(data.indexOf(suggested)))
-            suggestionsPanel.appendChild(div);
-        })
-        if(input === ''){
-            suggestionsPanel.innerHTML = '';
-        }
-
-        
-    })
-    
-
-   function Submit(x){
-    
-    
-    
-    let deaths = adata.Countries[x].TotalDeaths;
-    let number = adata.Countries[x].TotalConfirmed;
-    let y = document.getElementById("number");
-    let z = document.getElementById("deaths");
-    let o = document.getElementById("name");
-    
-    o.innerHTML = adata.Countries[x].Country;
-
-    let start = {
-    
-    startnumber: 0,
-    startdeath: 0,
-    
-    }
-    
-    y.innerText = number;
-    z.innerText = deaths;
-    
-    anime({
-        targets: start,
-        startnumber: number,
-        startdeath: deaths,
-        easing: 'linear',
-        duration: 1000,
-        round:1,
-        update: function() {
-            y.innerHTML = JSON.stringify(start.startnumber);
-            z.innerHTML = JSON.stringify(start.startdeath);
-          }
-
-   })
-   
-
-   }
-  
-
-  
-   
-    
-        
-   
-getData();
-*/
-
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+console.log(numberWithSpaces(845))
 
 getData();

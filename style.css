@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -13,7 +14,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 300vh;
-  overflow: hidden;
+
+  /*#F2F2FE*/
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +39,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
+  position: relative;
 }
 
 /* LANDING PAGE IMAGES */
@@ -44,8 +48,16 @@ body {
 #landing-page-bottom-bg {
   position: absolute;
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
   max-width: 100%;
+}
+
+#landing-page-bottom-bg-mobile {
+  display: none;
+}
+
+#landing-page-bottom-bg-phone {
+  display: none;
 }
 
 #virus1 {
@@ -58,6 +70,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 7%;
+  z-index: -1;
 }
 
 /* LANDING PAGE LEFT SIDE */
@@ -68,6 +81,7 @@ body {
 }
 
 .title {
+  padding-top: 0;
   font-size: 48px;
   margin-top: 0;
   margin-bottom: 40px;
@@ -94,7 +108,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   color: white;
-  background-color: #ccccff;
+  background-color: #bebefd;
   border: none;
   border-radius: 32px;
   cursor: pointer;
@@ -149,12 +163,16 @@ body {
   left: 2%;
 }
 
-.searching-page-bg {
+#searching-page-bg {
   position: absolute;
   z-index: -1;
   top: 0;
   right: 0;
   width: 100%;
+}
+
+#searching-page-path-mobile {
+  display: none;
 }
 
 #virus3 {
@@ -251,10 +269,13 @@ body {
 
 #virus4 {
   position: absolute;
-  bottom: -20%;
+  bottom: 0;
   left: 13%;
 }
 
+#stats-page-bottom-bg-mobile {
+  display: none;
+}
 .country-name p {
   font-size: 78px;
   margin: 0;
@@ -334,6 +355,415 @@ body {
 #github {
   fill: black;
   cursor: pointer;
+}
+
+/* 
+/
+/
+/
+/
+/
+/////MOBILE VIEW/////
+/
+/
+/
+/
+/
+/
+ */
+
+/*LANDING PAGE*/
+@media (min-width: 1700px) {
+  #virus1 {
+    width: 500px;
+  }
+
+  #virus2 {
+    width: 500px;
+  }
+
+  .title {
+    font-size: 88px;
+    width: 800px;
+    margin-bottom: 80px;
+  }
+
+  .title-text {
+    font-size: 30px;
+    margin-bottom: 120px;
+    width: 800px;
+  }
+
+  .buttons {
+    width: 850px;
+  }
+
+  .main-button {
+    padding: 30px 100px;
+    font-size: 26px;
+    border-radius: 42px;
+  }
+
+  #virus3 {
+    width: 500px;
+  }
+
+  #back-arrow-1 {
+    width: 100px;
+  }
+
+  .stats-landing-page-text {
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
+  .stats-landing-page-number {
+    font-size: 38px;
+    margin-bottom: 80px;
+  }
+
+  .searching-title {
+    font-size: 88px;
+  }
+
+  .search-box {
+    width: 800px;
+    height: 90px;
+    border-radius: 56px;
+    border: 14px solid #ccccff;
+  }
+
+  .search-box img {
+    width: 50px;
+  }
+
+  .search-txt {
+    font-size: 32px;
+  }
+
+  .suggestions {
+    width: 500px;
+    left: 150px;
+    max-height: 255px;
+    border-width: 0 10px 10px 10px;
+    border-radius: 0 0 28px 28px;
+  }
+  .suggestions > div {
+    padding: 25px;
+    font-size: 28px;
+  }
+
+  #virus4 {
+    width: 500px;
+    left: 7%;
+  }
+
+  #back-arrow-2 {
+    width: 100px;
+  }
+
+  .country-name p {
+    font-size: 92px;
+    margin-top: 50px;
+  }
+
+  .stat-title {
+    font-size: 50px;
+  }
+
+  .stat-number {
+    font-size: 42px;
+  }
+
+  .stat-title-new {
+    font-size: 42px;
+  }
+
+  .stat-number-new {
+    font-size: 36px;
+    color: #9d9dd8;
+    margin: 0;
+  }
+
+  .footer p {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+  }
+
+  #github {
+    width: 50px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1250px) {
+  #virus1 {
+    width: 250px;
+    right: 27%;
+    top: 20%;
+  }
+
+  #virus4 {
+    width: 250px;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  #virus1 {
+    display: none;
+  }
+  .stats-landing-page-text {
+    font-size: 28px;
+  }
+  .stats-landing-page-number {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 926px) {
+  .right-side {
+    display: none;
+  }
+  #virus1 {
+    display: none;
+  }
+  #virus2 {
+    width: 350px;
+  }
+
+  #landing-page-bottom-bg {
+    display: none;
+  }
+
+  #landing-page-bottom-bg-mobile {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+    width: 100%;
+  }
+
+  .left-side {
+    margin: 30px 50px;
+    width: 100%;
+    text-align: center;
+  }
+  .title {
+    width: auto;
+    font-size: 72px;
+  }
+  .title-text {
+    width: auto;
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+  }
+
+  #list-button {
+    display: none;
+  }
+
+  /*SEARCHING PAGE*/
+
+  #back-arrow-1 {
+    width: 50px;
+  }
+
+  #virus3 {
+    width: 350px;
+  }
+
+  #searching-page-bg {
+    display: none;
+  }
+  #searching-page-path-mobile {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .searching-content {
+    text-align: center;
+  }
+  .search-box {
+    width: 400px;
+    justify-content: space-evenly;
+  }
+  .suggestions {
+    width: 300px;
+    max-height: 110px;
+  }
+  /*STATS PAGE*/
+
+  .stats-page {
+    text-align: center;
+    margin: 0 20;
+  }
+
+  #back-arrow-2 {
+    width: 50px;
+  }
+
+  #stats-page-bottom-bg-mobile {
+    display: inline-block;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  #stats-page-path {
+    display: none;
+  }
+
+  #virus4 {
+    display: none;
+  }
+
+  .country-name p {
+    font-size: 58px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-title {
+    font-size: 28px;
+  }
+
+  .stats-total {
+    width: 80%;
+  }
+
+  .stats-new {
+    width: 80%;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  #github {
+    width: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  #landing-page-bottom-bg-mobile {
+    display: none;
+  }
+
+  #landing-page-bottom-bg-phone {
+    display: inline-block;
+    position: absolute;
+    bottom: -1%;
+    z-index: -2;
+    width: 100%;
+  }
+
+  .left-side {
+    margin: 30px 30px;
+  }
+
+  .title {
+    font-size: 46px;
+  }
+
+  .title-text {
+    font-size: 16px;
+  }
+  #virus2 {
+    width: 250px;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  .buttons {
+    padding-top: 20px;
+  }
+
+  .main-button {
+    padding: 15px 30px;
+  }
+
+  #virus3 {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  #back-arrow-2 {
+    width: 30px;
+  }
+
+  #back-arrow-1 {
+    width: 30px;
+  }
+  .search-box {
+    width: 250px;
+    justify-content: space-around;
+  }
+
+  .search-box input {
+    width: 150px;
+  }
+
+  .search-txt {
+    font-size: 16px;
+  }
+
+  .search-box img {
+    width: 30px;
+  }
+
+  .searching-title {
+    font-size: 38px;
+  }
+
+  .suggestions {
+    width: 150px;
+  }
+
+  .country-name p {
+    padding: 100px 0 60px 0;
+  }
+
+  .stat-title {
+    font-size: 22px;
+  }
+
+  .stat-number {
+    font-size: 18px;
+  }
+
+  .stat-title-new {
+    font-size: 18px;
+  }
+
+  .stat-number-new {
+    font-size: 16px;
+  }
+
+  .footer p {
+    font-size: 18px;
+  }
+
+  #github {
+    width: 30px;
+  }
 }
 
 /*.container{
